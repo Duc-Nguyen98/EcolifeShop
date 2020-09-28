@@ -8,5 +8,7 @@ app.use(express.urlencoded({ extended: true })); // gọi đến thư viện bod
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'app', 'views'));
 app.use(express.static(__dirname + '/public/'));
+app.use('/blog',express.static(__dirname + '/public/'));
+app.use('/shoppingCart',express.static(__dirname + '/public/'));
 router(app);
 app.listen(port, () => console.log(`http://localhost:${port}`));
